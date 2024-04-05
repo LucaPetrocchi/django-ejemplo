@@ -7,7 +7,8 @@ from products.models import Product, Category
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = [
-        'name', 
+        'name',
+        'category',
         'price', 
         'desc',
         ]
