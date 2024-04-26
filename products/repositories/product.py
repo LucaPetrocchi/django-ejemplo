@@ -5,6 +5,7 @@ from products.models import (
 from typing import (
     List,
     Optional,
+    Tuple
 )
 
 class ProductRepository:
@@ -44,6 +45,13 @@ class ProductRepository:
         category_id: int,
     ) -> List[Product]:
         return Product.objects.filter(category=category_id).first()
+    
+    def delete(
+        self,
+        product: Product,
+    ):
+        Product.delete(product)
+
 
 
 
